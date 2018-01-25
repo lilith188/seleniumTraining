@@ -10,7 +10,7 @@ public class DropdownTest extends BaseTest {
 
     @BeforeMethod
     public void setUp() {
-        dropdownPage = new DropdownPage();
+        dropdownPage = (DropdownPage) new DropdownPage().get();
     }
 
     @Test

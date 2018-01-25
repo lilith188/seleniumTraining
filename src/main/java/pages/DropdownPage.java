@@ -10,8 +10,17 @@ import static setup.DriverSetup.getDriver;
 
 public class DropdownPage extends BasePage {
     public DropdownPage() {
-        super(getDriver());
         visit(getUrl());
+    }
+
+    @Override
+    protected void load() {
+
+    }
+
+    @Override
+    protected void isLoaded() throws Error {
+        waitForElement(find(By.id("dropdown")));
     }
 
     public String getUrl() {

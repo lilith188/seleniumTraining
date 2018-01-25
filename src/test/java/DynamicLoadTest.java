@@ -7,21 +7,13 @@ import pages.DynamicLoadPage;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class DynamicLoadTest {
+public class DynamicLoadTest extends BaseTest {
 
-    private ChromeDriver driver;
     private DynamicLoadPage dynamicLoadPage;
 
     @BeforeMethod
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Automation\\seleniumDrivers\\chromedriver.exe");
-        driver = new ChromeDriver();
-        dynamicLoadPage = new DynamicLoadPage(driver);
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        driver.close();
+        dynamicLoadPage = new DynamicLoadPage();
     }
 
     @Test

@@ -4,7 +4,6 @@ import static setup.DriverSetup.getDriver;
 
 public class MultiWindowsPage extends BasePage {
     public MultiWindowsPage(){
-        super(getDriver());
         visit(getUrl());
     }
 

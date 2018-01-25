@@ -10,11 +10,11 @@ public class DragAndDropTest extends BaseTest{
 
     @BeforeMethod
     public void setUp(){
-        dragAndDropPage = new DragAndDropPage();
+        dragAndDropPage = (DragAndDropPage) new DragAndDropPage().get();
     }
 
     @Test
-    public void dragAndDropTest(){
+    public void dragAndDrop (){
         assertEquals(dragAndDropPage.getDropText(), "Drop here");
         dragAndDropPage.dragAndDrop();
         assertEquals(dragAndDropPage.getDropText(), "Dropped!");

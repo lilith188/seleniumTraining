@@ -8,20 +8,14 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class GoogleSearchTest {
     private GoogleSearchPage googleSearchPage;
-    private ChromeDriver driver;
+
 
 
     @BeforeMethod
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Automation\\seleniumDrivers\\chromedriver.exe");
-        driver = new ChromeDriver();
-        googleSearchPage = new GoogleSearchPage(driver);
+        googleSearchPage = new GoogleSearchPage();
     }
 
-    @AfterMethod
-    public void tearDown(){
-        driver.close();
-    }
 
     @Test
     public void searchTest(){
